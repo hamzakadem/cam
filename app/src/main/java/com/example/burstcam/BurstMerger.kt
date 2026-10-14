@@ -297,8 +297,8 @@ class BurstMerger(
                     val sx = (cx + cdx).coerceIn(0, cw - 1)
                     val sy = (cy + cdy).coerceIn(0, ch - 1)
                     val o = cy * cw + cx
-                    sumU[o] += (f.u[sy * cw + sx].toInt() and 255)
-                    sumV[o] += (f.v[sy * cw + sx].toInt() and 255)
+                    sumU[o] += (f.u[sy * cw + sx].toInt() and 255).toFloat()
+                    sumV[o] += (f.v[sy * cw + sx].toInt() and 255).toFloat()
                     cnt[o] += 1f
                 }
             }
